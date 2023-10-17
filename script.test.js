@@ -14,3 +14,12 @@ test("Calculator", () => {
   expect(calculator.divide(9, 3)).toBeCloseTo(3);
   expect(calculator.multiply(9, 12)).toBeCloseTo(108);
 });
+
+test("Caesar Cipher", () => {
+  expect(caesarCipher("defend the east wall of the castle", 1)).toBe(
+    "efgfoe uif fbtu xbmm pg uif dbtumf"
+  );
+  expect(caesarCipher("I will never give up.", 1)).toBe(
+    "H vhkk mdudq fhud to."
+  );
+});
