@@ -24,4 +24,16 @@ const calculator = {
   },
 };
 
+function caesarCipher(string, shiftFactor) {
+  const outputString = "";
+  for (let i = 0; i < string.length; i++) {
+    if (string[i].)
+  }
+}
+
+function isAlphabetical(char) {
+  const pattern = /^[a-zA-Z]$/;
+  return pattern.test(char);
+}
+
 export { capitalize, reverseString, calculator };
