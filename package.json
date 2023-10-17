@@ -3,5 +3,8 @@
     "@babel/preset-typescript": "^7.23.2",
     "@types/jest": "^29.5.5",
     "ts-jest": "^29.1.1"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
