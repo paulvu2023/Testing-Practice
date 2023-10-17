@@ -50,4 +50,23 @@ function isAlphabetical(char) {
   return pattern.test(char);
 }
 
-export { capitalize, reverseString, calculator, caesarCipher };
+function analyzeArray(array) {
+  const average =
+    array.reduce((accumulator, currentValue) => accumulator + currentValue, 0) /
+    array.length;
+  const min = array.reduce((minValue, currentValue) => {
+    return Math.min(minValue, currentValue);
+  }, array[0]);
+  const max = array.reduce((maxValue, currentValue) => {
+    return Math.max(maxValue, currentValue);
+  }, array[0]);
+  const length = array.length;
+  return {
+    average: average,
+    min: min,
+    max: max,
+    length: length,
+  };
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray };
