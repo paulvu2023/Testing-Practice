@@ -5,5 +5,5 @@ test("Capitalizes", () => {
 });
 
 test("Capitalizes", () => {
-  expect(reverse("P poT")).toBe("Top P");
+  expect(reverseString("P poT")).toBe("Top P");
 });
