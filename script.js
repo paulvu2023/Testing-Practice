@@ -25,10 +25,24 @@ const calculator = {
 };
 
 function caesarCipher(string, shiftFactor) {
-  const outputString = "";
+  let outputString = "";
   for (let i = 0; i < string.length; i++) {
-    if (string[i].)
+    if (isAlphabetical(string[i])) {
+      const charCode = string.charCodeAt(i);
+      if (charCode >= 65 && charCode <= 90) {
+        outputString += String.fromCharCode(
+          ((charCode + shiftFactor - 65) % 26) + 65
+        );
+      } else {
+        outputString += String.fromCharCode(
+          ((charCode + shiftFactor - 97) % 26) + 97
+        );
+      }
+    } else {
+      outputString += string[i];
+    }
   }
+  return outputString;
 }
 
 function isAlphabetical(char) {
@@ -36,4 +50,4 @@ function isAlphabetical(char) {
   return pattern.test(char);
 }
 
-export { capitalize, reverseString, calculator };
+export { capitalize, reverseString, calculator, caesarCipher };
